@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
 		windowWidth = jQuery(window).width();
 		
 		myScrollVal(0.06, '.bgimg-1:first', 'up');
-		myScrollVal(0.06,'.bgimg-2', 'up');
+		myScrollVal(0.05,'.bgimg-2', 'up');
 		myScrollVal(0.06,'.bgimg-3');
 		myScrollVal(0.06,'.bgimg-1:last');
 
