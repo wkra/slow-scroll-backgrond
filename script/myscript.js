@@ -16,7 +16,28 @@ jQuery(document).ready(function(){
 		myScrollVal(0.05,'.bgimg-2', 'up');
 		myScrollVal(0.06,'.bgimg-3');
 		myScrollVal(0.06,'.bgimg-1:last');
-
+	
+	// scroll-progressbar beginning
+	var documentHeight = $(document).height();
+	var scrollValue = documentHeight - windowHeight;
+	var scrollValuenow = function (){
+		if (windowScrollPosBottom-windowHeight == 0){
+			return 0;
+		} else{
+			return ((windowScrollPosBottom-windowHeight)*100)/(scrollValue);
+		}
+	}
+	console.log("scrollValue " +scrollValue )
+	console.log("documentHeight " +documentHeight )
+	console.log("windowHeight " +windowHeight )
+	console.log("scrollValuenow " + scrollValuenow());
+	console.log("windowScrollPosBottom " + windowScrollPosBottom);
+	console.log("windowHeight " + windowHeight);
+	
+	
+	$(".progress-bar").attr({	"aria-valuenow": scrollValuenow(),
+								"style": "width:"+scrollValuenow()+"%;"})
+	// scroll-progressbar end
 		
 	});
 	
@@ -31,7 +52,6 @@ jQuery(document).ready(function(){
 			var scrollTop = $(this).scrollTop();
 			if (direction == 'up'){
 				$(object).css('background-position', '50%' + (0+(windowScrollPosBottom-objectOffsetTop)*value) + '%');
-				console.log("animuje" + object)
 			} else {
 				$(object).css('background-position', '50%' + (100-(windowScrollPosBottom-objectOffsetTop)*value) + '%');
 			}
