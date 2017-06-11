@@ -26,10 +26,12 @@ jQuery(document).ready(function(){
 		var objectOffsetTop = objectOffset.top;
 		var objectOffsetBottom = objectOffsetTop + jQuery(object).outerHeight();
 
-		if (windowScrollPosBottom > objectOffsetTop){
+		if (windowScrollPosBottom > objectOffsetTop && windowScrollPosTop < (objectOffsetTop+$(object).height())){
+
 			var scrollTop = $(this).scrollTop();
 			if (direction == 'up'){
 				$(object).css('background-position', '50%' + (0+(windowScrollPosBottom-objectOffsetTop)*value) + '%');
+				console.log("animuje" + object)
 			} else {
 				$(object).css('background-position', '50%' + (100-(windowScrollPosBottom-objectOffsetTop)*value) + '%');
 			}
