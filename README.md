@@ -1,2 +1,2 @@
-# slow-scroll-backgrond
-<a href="https://wkra.github.io/slow-scroll-backgrond/">Demo</a>
+# slow-scroll-background + scrollbar progress
+<a href="https://wkra.github.io/slow-scroll-background/">Demo</a>
