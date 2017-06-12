@@ -53,7 +53,7 @@ h3 {
   color: #111;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
+/* Turn off scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
@@ -65,6 +65,6 @@ h3 {
 	z-index:999;
 }
 .progress{
-	height:5px;
+	height:8px;
 	background-color: transparent;
 }
